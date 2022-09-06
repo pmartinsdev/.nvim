@@ -84,10 +84,28 @@ nnoremap <silent> <C-f> :Ag<CR>
 " NerdTree Settings =================================================
 let NERDTreeShowHidden=1
 
-let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
-nnoremap <C-b> :NERDTreeToggle<CR>
+let g:NERDTreeQuitOnOpen = 1
+let g:NERDTreeWinSize=60
+nnoremap <silent> <C-b> :call <SID>toggleNerdTree() <CR>
+
+" Check if NerdTree is oppened
+function IsNerdTreeOppened()
+    return exists('t:NERDTreeBufName') && bufwinnr(t:NERDTreeBufName) != -1
+endfunction
+
+" Toggle NerdTree Open and close 
+function! s:toggleNerdTree()
+	if IsNerdTreeOppened()
+		:NERDTreeToggle
+	else
+		:NERDTreeFind
+	endif
+endfunction
 
 " Airline Settings ==================================================
 let g:airline_theme='sierra'
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
+
+
+let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
