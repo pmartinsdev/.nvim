@@ -44,6 +44,7 @@ set title "Show the file title"
 set completeopt "Modifies the auto-complete menu to behave more like an IDE"
 
 " Shortcuts
+nnoremap <C-q> :tabclose<CR>
 
 " Coc Settings  ======================================================
 
@@ -87,6 +88,6 @@ let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclu
 nnoremap <C-b> :NERDTreeToggle<CR>
 
 " Airline Settings ==================================================
-let g:airline_theme='snazzy'
+let g:airline_theme='sierra'
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
