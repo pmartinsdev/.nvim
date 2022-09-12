@@ -12,6 +12,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'neoclide/coc.nvim', {'branch': 'release'} 
 Plug 'ap/vim-css-color'
 Plug 'jiangmiao/auto-pairs'
+Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 
 " Utilities
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -38,13 +39,18 @@ set tabstop=2 "set number of spaces that a <Tab> in the file counts for"
 set shiftwidth=2 "set number of spaces to use for each step of (auto)indent."
 set softtabstop=2 "set number of spaces that a <Tab> counts for while editing"
 set relativenumber number "Shows the relative line number based into cursor"
-set t_Co=256 " Enabling 256 color in the terminal" 
 set clipboard=unnamedplus "Enables the clopboard between Vim/Neovim and other applications"
 set title "Show the file title"
 set completeopt "Modifies the auto-complete menu to behave more like an IDE"
 
 " Shortcuts
 nnoremap <C-q> :tabclose<CR>
+
+" Blocking the arrow keys 
+map <up> :echoerr "Why are you doing this ??? use letter 'k'"<CR>
+map <down> :echoerr "Why are you doing this ??? use letter 'j'"<CR>
+map <left> :echoerr "Why are you doing this ??? use letter 'h'"<CR>
+map <right> :echoerr "Why are you doing this ??? use letter 'l'"<CR>
 
 " Coc Settings  ======================================================
 
