@@ -1,7 +1,7 @@
 call plug#begin()
 
 " Theme
-Plug 'connorholyday/vim-snazzy'
+Plug 'tjammer/focusedpanic.vim'
 
 " Appearance
 Plug 'vim-airline/vim-airline'
@@ -32,7 +32,7 @@ call plug#end()
 
 " Theme settings
 set background=dark
-colorscheme snazzy
+colorscheme focusedpanic
 
 
 syntax enable 
