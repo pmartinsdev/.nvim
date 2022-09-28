@@ -15,10 +15,11 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 
 " Utilities
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
 Plug 'preservim/nerdtree'
+Plug 'preservim/nerdcommenter'
 Plug 'sheerun/vim-polyglot'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.0' }
 
 " GIT
 Plug 'airblade/vim-gitgutter'
@@ -80,12 +81,12 @@ function! s:showImplementation()
 	endif
 endfunction
 
-" FZF Settings ======================================================
+" Telescope Settings ======================================================
 
 " shortcuts
-nnoremap <silent> <C-p> :Files<CR>
-nnoremap <silent> <C-f> :Ag<CR>
 
+nnoremap <silent> <C-p> :Telescope find_files prompt_prefix=🔍:   <CR>
+nnoremap <silent> <C-f> :Telescope live_grep prompt_prefix=🔍:  <CR>
 
 " NerdTree Settings =================================================
 let NERDTreeShowHidden=1
@@ -115,3 +116,9 @@ let g:airline#extensions#tabline#enabled = 1
 
 
 let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
+
+" NerdCommenter Settings =====================================================
+
+"shortcuts
+
+:map <C-c> <plug>NERDCommenterToggle
