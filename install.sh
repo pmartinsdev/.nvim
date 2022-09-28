@@ -9,7 +9,7 @@ if [ ! -x "$(command -v node)" ]; then
 fi
 
 # Installing all extensions from Coc
-vim -c 'CocInstall -sync coc-tsserver coc-prettier coc-json coc-html coc-go coc-pyright coc-jedi |q'
+vim -c 'CocInstall -sync coc-tsserver coc-prettier coc-json coc-html coc-go coc-pyright |q'
 
 #vim -c 'PlugInstall |qa!'
 
