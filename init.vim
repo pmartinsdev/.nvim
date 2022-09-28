@@ -7,6 +7,7 @@ Plug 'connorholyday/vim-snazzy'
 Plug 'vim-airline/vim-airline'
 Plug 'ryanoasis/vim-devicons'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'kyazdani42/nvim-web-devicons'
 
 " Completion / linters / formatters
 Plug 'neoclide/coc.nvim', {'branch': 'release'} 
@@ -18,11 +19,14 @@ Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 Plug 'preservim/nerdtree'
 Plug 'preservim/nerdcommenter'
 Plug 'sheerun/vim-polyglot'
+
+" File Tree
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.0' }
 
 " GIT
 Plug 'airblade/vim-gitgutter'
+Plug 'sindrets/diffview.nvim'
 
 call plug#end()
 
@@ -122,3 +126,10 @@ let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclu
 "shortcuts
 
 :map <C-c> <plug>NERDCommenterToggle
+
+" DiffView Settings ======================================================
+
+" shortcuts
+
+nnoremap <silent> <C-g><C-f> :DiffviewOpen <CR>
+nnoremap <silent> <C-g><C-f><C-f> :DiffviewClose <CR>
