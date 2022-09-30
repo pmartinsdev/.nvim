@@ -12,6 +12,7 @@ Plug 'kyazdani42/nvim-web-devicons'
 " Completion / linters / formatters
 Plug 'neoclide/coc.nvim', {'branch': 'release'} 
 Plug 'ap/vim-css-color'
+Plug 'psf/black', { 'branch': 'stable' }
 Plug 'jiangmiao/auto-pairs'
 Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 
@@ -47,6 +48,8 @@ set relativenumber number "Shows the relative line number based into cursor"
 set clipboard=unnamedplus "Enables the clopboard between Vim/Neovim and other applications"
 set title "Show the file title"
 set completeopt "Modifies the auto-complete menu to behave more like an IDE"
+
+let g:python3_host_prog= $HOME . '/.local/venv/nvim/bin/python'
 
 " Shortcuts
 nnoremap <C-q> :tabclose<CR>
@@ -133,3 +136,11 @@ let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclu
 
 nnoremap <silent> <C-g><C-f> :DiffviewOpen <CR>
 nnoremap <silent> <C-g><C-f><C-f> :DiffviewClose <CR>
+
+" Black Settings ==============================================
+
+" Format file on save
+augroup black_on_save
+  autocmd!
+  autocmd BufWritePre *.py Black
+augroup en
