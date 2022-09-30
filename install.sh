@@ -11,6 +11,6 @@ fi
 # Installing all extensions from Coc
 vim -c 'CocInstall -sync coc-tsserver coc-prettier coc-json coc-html coc-go coc-pyright |q'
 
-#vim -c 'PlugInstall |qa!'
+vim -c 'PlugInstall |qa!'
 
 echo "Finished to setup plugin, happy hacking !!"
