@@ -20,6 +20,7 @@ Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 Plug 'preservim/nerdtree'
 Plug 'preservim/nerdcommenter'
 Plug 'sheerun/vim-polyglot'
+Plug 'brooth/far.vim'
 
 " File Tree
 Plug 'nvim-lua/plenary.nvim'
@@ -144,3 +145,11 @@ augroup black_on_save
   autocmd!
   autocmd BufWritePre *.py Black
 augroup en
+
+" Far Settings =============================================
+
+let g:far#enable_undo=1 
+
+nnoremap <silent> <C-f><C-f> :Farr<CR>
+nnoremap <silent> <C-f><C-f><C-c> :Fardo<CR>
+nnoremap <silent> <C-f><C-f><C-u> :Farundo<CR>
