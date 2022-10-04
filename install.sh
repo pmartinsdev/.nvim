@@ -9,8 +9,8 @@ if [ ! -x "$(command -v node)" ]; then
 fi
 
 # Installing all extensions from Coc
-vim -c 'CocInstall -sync coc-tsserver coc-prettier coc-json coc-html coc-go coc-pyright |q'
+nvim -c 'CocInstall -sync coc-tsserver coc-prettier coc-json coc-html coc-go coc-pyright |q'
 
-vim -c 'PlugInstall |qa!'
+nvim -c 'PlugInstall |qa!'
 
 echo "Finished to setup plugin, happy hacking !!"

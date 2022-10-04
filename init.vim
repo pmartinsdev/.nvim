@@ -1,7 +1,7 @@
 call plug#begin()
 
 " Theme
-Plug 'tjammer/focusedpanic.vim'
+Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 
 " Appearance
 Plug 'vim-airline/vim-airline'
@@ -34,7 +34,7 @@ call plug#end()
 
 " Theme settings
 set background=dark
-colorscheme focusedpanic
+colorscheme tokyonight-night
 
 
 syntax enable 
