@@ -6,7 +6,9 @@ Welcome to my nvim configuration, i hope help you with something :)
 
 1. Unix System
 2. Vim
-3. Neo Vim
+3. Neo Vim 0.7+
+4. Git 2.37+
+5. [ripGrep](https://github.com/BurntSushi/ripgrep)
 
 ## How to install ?
 
