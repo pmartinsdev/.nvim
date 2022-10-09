@@ -8,9 +8,9 @@ if [ ! -x "$(command -v node)" ]; then
     export PATH="/usr/local/bin/:$PATH"
 fi
 
+nvim -c 'PlugInstall |qa!'
+
 # Installing all extensions from Coc
 nvim -c 'CocInstall -sync coc-tsserver coc-prettier coc-json coc-html coc-go coc-pyright |q'
-
-nvim -c 'PlugInstall |qa!'
 
 echo "Finished to setup plugin, happy hacking !!"
