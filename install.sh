@@ -1,6 +1,6 @@
 # Installing Plug from vim.plug
-sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
-       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+git clone --depth 1 https://github.com/wbthomason/packer.nvim\
+ ~/.local/share/nvim/site/pack/packer/start/packer.nvim -q
 
 # Check and Install NodeJS if it not exists into machine
 if [ ! -x "$(command -v node)" ]; then
@@ -8,9 +8,9 @@ if [ ! -x "$(command -v node)" ]; then
     export PATH="/usr/local/bin/:$PATH"
 fi
 
-nvim -c 'PlugInstall |qa!'
+nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
 
 # Installing all extensions from Coc
-nvim -c 'CocInstall -sync coc-tsserver coc-prettier coc-json coc-html coc-go coc-pyright |q'
+# nvim -c 'CocInstall -sync coc-tsserver coc-prettier coc-json coc-html coc-go coc-pyright |q'
 
 echo "Finished to setup plugin, happy hacking !!"
