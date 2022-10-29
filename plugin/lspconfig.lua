@@ -106,17 +106,7 @@ nvim_lsp.sumneko_lua.setup {
   },
 }
 
-nvim_lsp.tailwindcss.setup {
-  on_attach = on_attach,
-  capabilities = capabilities
-}
-
 nvim_lsp.cssls.setup {
-  on_attach = on_attach,
-  capabilities = capabilities
-}
-
-nvim_lsp.astro.setup {
   on_attach = on_attach,
   capabilities = capabilities
 }
