@@ -94,6 +94,11 @@ _G.packer_plugins = {
     path = "/Users/martins20/.local/share/nvim/site/pack/packer/start/colorbuddy.nvim",
     url = "https://github.com/tjdevries/colorbuddy.nvim"
   },
+  ["diffview.nvim"] = {
+    loaded = true,
+    path = "/Users/martins20/.local/share/nvim/site/pack/packer/start/diffview.nvim",
+    url = "https://github.com/sindrets/diffview.nvim"
+  },
   ["git.nvim"] = {
     loaded = true,
     path = "/Users/martins20/.local/share/nvim/site/pack/packer/start/git.nvim",
