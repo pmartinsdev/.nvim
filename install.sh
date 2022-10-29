@@ -8,9 +8,10 @@ if [ ! -x "$(command -v node)" ]; then
     export PATH="/usr/local/bin/:$PATH"
 fi
 
-nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
+nvim --headless -c ':PackerCompile' -c ':PackerInstall' -c 'qall'
+nvim --headless -c ':LspInstall tsserver cssls html pyright'  -c 'qall'
+nvim --headless -c ':MasonInstall black prettier eslint_d'  -c 'qall'
 
-# Installing all extensions from Coc
-# nvim -c 'CocInstall -sync coc-tsserver coc-prettier coc-json coc-html coc-go coc-pyright |q'
+clear
 
 echo "Finished to setup plugin, happy hacking !!"
