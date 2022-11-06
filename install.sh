@@ -1,4 +1,4 @@
-# Installing Plug from vim.plug
+# Installing Packer from vim.plug
 git clone --depth 1 https://github.com/wbthomason/packer.nvim\
  ~/.local/share/nvim/site/pack/packer/start/packer.nvim -q
 
