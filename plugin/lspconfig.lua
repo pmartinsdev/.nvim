@@ -82,6 +82,8 @@ nvim_lsp.tsserver.setup {
   capabilities = capabilities
 }
 
+nvim_lsp.angularls.setup {}
+
 nvim_lsp.pyright.setup {
   on_attach = on_attach,
   capabilities = capabilities,

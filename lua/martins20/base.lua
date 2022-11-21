@@ -31,4 +31,3 @@ vim.opt.wildignore:append { '*/node_modules/*' }
 vim.opt.completeopt = "menu"
 vim.opt.relativenumber = true
 vim.opt.swapfile = false
-
