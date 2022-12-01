@@ -15,6 +15,7 @@ keymap.set('n', '<C-a>', 'gg<S-v>G')
 -- Tabs
 keymap.set('n', 'te', ':tabedit')
 keymap.set('n', 'tc', ':tabclose<Return>', { silent = true })
+keymap.set('n', '<Space>', ':tabnext<Return>', { silent = true })
 
 -- Split window
 keymap.set('n', 'ss', ':split<Return><C-w>w')
@@ -22,7 +23,7 @@ keymap.set('n', 'sv', ':vsplit<Return><C-w>w')
 keymap.set('n', 'sq', '<C-w>q')
 
 -- Move window
-keymap.set('n', '<Space>', '<C-w>w')
+keymap.set('n', 'sw', '<C-w>w')
 keymap.set('', 'sh', '<C-w>h')
 keymap.set('', 'sk', '<C-w>k')
 keymap.set('', 'sj', '<C-w>j')
