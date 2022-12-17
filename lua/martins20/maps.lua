@@ -35,6 +35,12 @@ keymap.set('n', '<C-w><right>', '<C-w>>')
 keymap.set('n', '<C-w><up>', '<C-w>+')
 keymap.set('n', '<C-w><down>', '<C-w>-')
 
+-- Saving file
+keymap.set('', ';w', '<Esc>:w<Return>')
+keymap.set('', ';wa', '<Esc>:wa<Return>')
+
+
 -- Git
+keymap.set('', 'gc', '<Esc>:!git commit -m "')
 keymap.set('', 'gaa', '<Esc>:!git add .<Return><Return>', { silent = true })
-keymap.set("", 'gc', '<Esc>:!git commit -m "')
+keymap.set('', 'gp', '<Esc>:!git push origin $(git rev-parse --abbrev-ref HEAD)<Return><Return>')
