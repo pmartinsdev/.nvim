@@ -37,3 +37,4 @@ keymap.set('n', '<C-w><down>', '<C-w>-')
 
 -- Git
 keymap.set('', 'gaa', '<Esc>:!git add .<Return><Return>', { silent = true })
+keymap.set("", 'gc', '<Esc>:!git commit -m "')
