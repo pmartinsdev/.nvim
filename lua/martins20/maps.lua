@@ -1,3 +1,5 @@
+require('martins20.functions')
+
 local keymap = vim.keymap
 
 keymap.set('n', 'x', '"_x')
@@ -50,3 +52,6 @@ keymap.set('', 'gaa', '<Esc>:!git add .<Return><Return>', { silent = true })
 keymap.set('', 'gsa', '<Esc>:!git stash apply<Return><Return>', { silent = true })
 keymap.set('', 'gl', '<Esc>:!git pull origin $(git rev-parse --abbrev-ref HEAD)<Return>')
 keymap.set('', 'gp', '<Esc>:!git push origin $(git rev-parse --abbrev-ref HEAD)<Return><Return>', { silent = true })
+
+
+keymap.set('', ';ec', executeCommandIntoCurrentBufferPath)
