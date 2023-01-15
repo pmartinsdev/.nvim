@@ -21,15 +21,12 @@ telescope.setup {
   extensions = {
     file_browser = {
       theme = "dropdown",
-      -- disables netrw and use telescope-file-browser in its place
       hijack_netrw = true,
       mappings = {
-        -- your custom insert mode mappings
         ["i"] = {
           ["<C-w>"] = function() vim.cmd('normal vbd') end,
         },
         ["n"] = {
-          -- your custom normal mode mappings
           ["N"] = fb_actions.create,
           ["c"] = fb_actions.copy,
           ["h"] = fb_actions.goto_parent_dir,

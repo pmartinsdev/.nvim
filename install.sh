@@ -9,7 +9,6 @@ if [ ! -x "$(command -v node)" ]; then
 fi
 
 nvim --headless -c ':PackerCompile' -c ':PackerInstall' -c 'qall'
-nvim --headless -c ':LspInstall tsserver cssls html pyright eslint'  -c 'qall'
 nvim --headless -c ':MasonInstall black prettier'  -c 'qall'
 
 clear

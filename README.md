@@ -8,7 +8,8 @@ Welcome to my nvim configuration, i hope help you with something :)
 2. Vim
 3. Neo Vim 0.7+
 4. Git 2.37+
-5. [ripGrep](https://github.com/BurntSushi/ripgrep)
+5. [Lua Language Server](https://github.com/sumneko/lua-language-server)
+6. [ripGrep](https://github.com/BurntSushi/ripgrep)
 
 ## How to install ?
 
