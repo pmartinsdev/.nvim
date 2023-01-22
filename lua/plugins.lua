@@ -31,6 +31,7 @@ packer.startup(function(use)
   use 'glepnir/lspsaga.nvim'
   use 'windwp/nvim-autopairs'
   use 'windwp/nvim-ts-autotag'
+  use "terrortylor/nvim-comment"
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
 
   -- Completion
