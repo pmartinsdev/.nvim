@@ -95,6 +95,11 @@ nvim_lsp.sumneko_lua.setup {
   },
 }
 
+nvim_lsp.tailwindcss.setup {
+  on_attach = on_attach,
+  capabilities = capabilities
+}
+
 nvim_lsp.cssls.setup {
   on_attach = on_attach,
   capabilities = capabilities
@@ -106,8 +111,7 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
   update_in_insert = false,
   virtual_text = { spacing = 4, prefix = "●" },
   severity_sort = true,
-}
-)
+})
 
 -- Diagnostic symbols in the sign column (gutter)
 local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }

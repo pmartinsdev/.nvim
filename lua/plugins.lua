@@ -59,5 +59,11 @@ packer.startup(function(use)
   use 'f-person/git-blame.nvim'
   use 'lewis6991/gitsigns.nvim'
 
+  -- Previews
+  use({
+    "iamcco/markdown-preview.nvim", -- Markdown Preview
+    run = function() vim.fn["mkdp#util#install"]() end,
+  })
+
 
 end)
