@@ -1,4 +1,4 @@
-# Martins20's NVIM Setup
+# pmartinsdev's NVIM Setup
 
 Welcome to my nvim configuration, i hope help you with something :)
 
