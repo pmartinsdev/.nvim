@@ -23,8 +23,8 @@ packer.startup(function(use)
 
   -- UI helpers
   use {
-    'nvim-lualine/lualine.nvim',
-    requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+      'nvim-lualine/lualine.nvim',
+      requires = { 'kyazdani42/nvim-web-devicons', opt = true }
   }
 
   -- Intelisense
@@ -44,7 +44,7 @@ packer.startup(function(use)
   use({ "L3MON4D3/LuaSnip", tag = "v<CurrentMajor>.*" })
 
   -- Theme
-  use 'folke/tokyonight.nvim'
+  use "ray-x/aurora"
 
   -- Package Manager
   use "neovim/nvim-lspconfig"
@@ -61,9 +61,7 @@ packer.startup(function(use)
 
   -- Previews
   use({
-    "iamcco/markdown-preview.nvim", -- Markdown Preview
-    run = function() vim.fn["mkdp#util#install"]() end,
+      "iamcco/markdown-preview.nvim", -- Markdown Preview
+      run = function() vim.fn["mkdp#util#install"]() end,
   })
-
-
 end)
