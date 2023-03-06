@@ -30,7 +30,7 @@ vim.opt.shiftwidth = 2
 vim.opt.laststatus = 2
 vim.opt.scrolloff = 10
 
-vim.opt.shell = 'fish'
+vim.opt.shell = 'zsh'
 vim.opt.completeopt = "menu"
 vim.opt.inccommand = 'split'
 vim.opt.backspace = { 'start', 'eol', 'indent' }

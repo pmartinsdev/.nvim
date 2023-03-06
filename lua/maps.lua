@@ -25,11 +25,6 @@ keymap.set('', 'sk', '<C-w>k')
 keymap.set('', 'sj', '<C-w>j')
 keymap.set('', 'sl', '<C-w>l')
 
--- Saving file
-keymap.set('', ';ww', '<Esc>:w<Return>', { silent = true })
-keymap.set('', ';wa', '<Esc>:wa<Return>', { silent = true })
-keymap.set('', ';wq', '<Esc>:wq<Return>', { silent = true })
-
 -- Git
 keymap.set('', 'gm', '<Esc>:!git merge ')
 keymap.set('', 'gco', '<Esc>:!git checkout ')
